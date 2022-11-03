@@ -13,13 +13,13 @@ Clone the repo in your machine or copy the code inside the "desktopfy.sh" file.
 If want to execute globally in your machine, rename the file and remove the ".sh" in the filename:
 
 ```bash
-mv path_to_file/desktopfy.sh path_to_file/desktopfy
+mv /path/to/script/desktopfy.sh /path/to/script/desktopfy
 ```
 
 Then, move the new file inside the binaries location in your machine. Recommended to move inside" ~/.local/bin":
 
 ```bash
-mv path_to_file/desktopfy ~/.local/bin
+mv /path/to/script/desktopfy ~/.local/bin
 ```
 
 ## Usage/Examples
@@ -68,7 +68,7 @@ mv path_to_file/desktopfy ~/.local/bin
 
 	* Executable (-e): The path to the executable.
 
-  		- Recommend the use of the absolute path ("/the/complet/path/to/file.AppImage").
+  		- Recommend the use of the absolute path ("/the/complete/path/to/file.AppImage").
 
 		- Recommend the use of ".AppImage" files.
 
@@ -90,7 +90,7 @@ mv path_to_file/desktopfy ~/.local/bin
 
 ### Examples
 
-The examples will be of a process to add a shortcut to "Balena Etcher".
+The examples will be of a process to add a shortcut for "Balena Etcher".
 
 1. Common case
 
