@@ -21,7 +21,7 @@ usage() {
 }
 
 fileError() {
-	printf "\nError: $1 doesn't exist\n\n"
+	printf "\nError: \"$1\" doesn't exist\n\n"
 }
 
 current=$(pwd)
@@ -42,7 +42,7 @@ while getopts "n:e:i:t:" args
 		;;
 	t)
 		terminal=${OPTARG}
-		[[ ! $terminal == "true" && ! $terminal == "false" ]] && printf "Error: $terminal isn't a valid argument" && usage
+		[[ ! $terminal == "true" && ! $terminal == "false" ]] && printf "Error: \"$terminal\" isn't a valid argument for -t\n\n" && usage
 		;;
 	*)	usage
 	esac
@@ -54,11 +54,11 @@ filename="$nameclear.desktop"
 
 cd ~/.local/share/applications
 
-printf "\nCreating $name as $filename\n"
+printf "\nCreating \"$name\" as \"$filename\"\n"
 
 if [[ -f $filename ]]
 	then
-		read -p "$filename already exists among the shortcuts, do you want to overwrite file? [y/n]: " accept
+		read -p "\"$filename\" already exists among the shortcuts, do you want to overwrite file? [y/n]: " accept
 		if [[ $accept == "y" || $accept == "Y" ]]
 			then rm -rf $filename
 			else
@@ -78,4 +78,4 @@ echo "Type=Application" >> $filename
 echo "Categories=Development" >> $filename
 echo "MimeType=x-scheme-handler/$nameclear;text/html;" >> $filename
 
-echo "\"$name\" was created as $filename"
+echo "\"$name\" was created as \"$filename\""
